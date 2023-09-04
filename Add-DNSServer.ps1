@@ -19,7 +19,7 @@ Start-Transcript -path $logFile
 
 #Set wired and wireless nic names
 $WiredInterfaceName = "Ethernet"
-$WirelessInterfaceName = "WLAN"
+$WirelessInterfaceName = "Wi-Fi"
 
 #Configure DNS servers
 $dnsclient = Get-DnsClient | Get-DnsClientServerAddress | where {$_.InterfaceAlias -match $WiredInterfaceName -or $_.InterfaceAlias -match $WirelessInterfaceName}
